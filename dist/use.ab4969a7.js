@@ -207,11 +207,11 @@
       });
     }
   }
-})({"ceiWL":[function(require,module,exports,__globalThis) {
+})({"aVDyS":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 61074;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -730,29 +730,26 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 var _s = $RefreshSig$();
 function Timer() {
     _s();
-    const [timer, settimer] = (0, _react.useState)(0);
+    const [timer, setTimer] = (0, _react.useState)(0);
     (0, _react.useEffect)(()=>{
         const interval = setInterval(()=>{
-            settimer((PreviousValue)=>PreviousValue + 1);
+            setTimer((prev)=>prev + 1);
         }, 1000);
-        return ()=>{
-            clearInterval(interval);
-        };
-    }, [
-        timer
-    ]);
+        // Cleanup on unmount
+        return ()=>clearInterval(interval);
+    }, []); // Run effect only once
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: [
-            "timer=",
+            "Time: ",
             timer
         ]
     }, void 0, true, {
         fileName: "Useffects_hook/use.js",
-        lineNumber: 17,
-        columnNumber: 9
+        lineNumber: 18,
+        columnNumber: 10
     }, this);
 }
-_s(Timer, "WVPG6jaTy4Pr9kCyzHF4IHVTjmo=");
+_s(Timer, "ebJi34r7i5iV6ijtknLV7I/4wK8=");
 _c = Timer;
 (0, _clientDefault.default).createRoot(document.getElementById('root')).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Timer, {}, void 0, false, {
     fileName: "Useffects_hook/use.js",
@@ -19729,6 +19726,6 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["ceiWL","g2NMd"], "g2NMd", "parcelRequire70dd", {}, null, null, "http://localhost:61074")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["aVDyS","g2NMd"], "g2NMd", "parcelRequire70dd", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=use.ab4969a7.js.map
